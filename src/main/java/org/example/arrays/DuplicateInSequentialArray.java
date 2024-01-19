@@ -11,7 +11,7 @@ public class DuplicateInSequentialArray {
     }
 
     public static void main(String[] args) {
-        int [] arr = new int[] {2, 2, 3, 4, 5, 6, 1};
+        int [] arr = new int[] {2, 3, 3, 4, 5, 6, 1};
         int sumWithDuplicates = 0;
         for (int i : arr) {
             sumWithDuplicates += i;

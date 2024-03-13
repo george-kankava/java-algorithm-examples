@@ -5,18 +5,33 @@ import java.util.Arrays;
 
 public class AnagramString {
 
-    public static boolean isAnagram(String first, String second) {
-        char[] firstCharArray = first.toCharArray();
-        String anagram = second;
-        for (char c : firstCharArray) {
-            int indexOf = anagram.indexOf(c);
-            if (indexOf != -1) {
-                anagram = anagram.substring(0, indexOf) + anagram.substring(indexOf + 1, anagram.length());
+    public static void main(String[] args) {
+        System.out.println(isAnag("army", "mary"));
+    }
+
+    public static boolean isAnag(String first, String second) {
+        for (char c : first.toCharArray()) {
+            int indexInSecond = second.indexOf(c);
+            if (indexInSecond != -1) {
+                second = second.substring(0, indexInSecond) + second.substring(indexInSecond + 1);
             } else {
                 return false;
             }
         }
-        return anagram.isEmpty();
+        return second.isEmpty();
+
+    }
+
+    public static boolean isAnagram(String first, String second) {
+        for (char c : first.toCharArray()) {
+            int indexOf = second.indexOf(c);
+            if (indexOf != -1) {
+                second = second.substring(0, indexOf) + second.substring(indexOf + 1);
+            } else {
+                return false;
+            }
+        }
+        return second.isEmpty();
     }
 
     public static boolean isAnagramBySorting(String first, String second) {
@@ -38,7 +53,7 @@ public class AnagramString {
                 return false;
             }
         }
-        return stSecond.length() == 0 ? true : false;
+        return stSecond.length() == 0;
     }
 
 }

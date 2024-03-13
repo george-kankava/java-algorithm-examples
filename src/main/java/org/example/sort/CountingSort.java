@@ -5,9 +5,9 @@ import java.util.Arrays;
 public class CountingSort {
 
     public static void main(String[] args) {
-        int [] array = {4, 4, 1, 3, 2, 7, 9, 8, 3, 1};
+        int [] array = {4, 4, 1, 3, 2, 7, 9, 8, 3, 1, 20};
 
-        int [] count = new int [array.length];
+        int [] count = new int [21];
         for (int k : array) {
             count[k]++;
         }

@@ -15,9 +15,20 @@ public class JavaPalindromeCheckProgram {
     }
     /* Recursive Java example to check for palindromes */
 
+    public static boolean palCheck(String s) {
+        if (s.isEmpty() || s.length() == 1) {
+            return true;
+        }
+
+        if (s.charAt(0) == s.charAt(s.length() - 1)) {
+            return palCheck(s.substring(1, s.length() - 1));
+        }
+        return false;
+    }
+
     public static boolean palindromeCheck(String s) {
 
-        if (s.length() == 0 || s.length() == 1) {
+        if (s.isEmpty() || s.length() == 1) {
             return true;
         }
         if (s.charAt(0) == s.charAt(s.length() - 1)) {

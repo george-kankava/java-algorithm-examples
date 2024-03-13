@@ -1,9 +1,7 @@
 package org.example.arrays;
 
-import java.util.Arrays;
 
 public class Fibonacci {
-
 
     public static int fibRecursion(int count) {
         if (count == 0) {
@@ -18,7 +16,7 @@ public class Fibonacci {
         return fibRecursion(count - 1) + fibRecursion(count - 2);
     }
 
-    public static void main(String args[]) {
+    public static void main(String [] args) {
         int fib_len = 5;
 
         System.out.print("Fibonacci Series of " + fib_len + " numbers is: \n");
